@@ -1,8 +1,58 @@
----
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
+
+
+
+
+## 教育经历
+
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+
+
+
+
+## 发表论文（包括在投）
+
+---
+
+
+
+
+
+## 项目经历
+
+---
+
+### **终端云服务业务特征感知调度技术**
+
+
+
+### **多隐私等级的云-边-端工作流调度**
+
+
+
+### **Kubernetes调度算法调优**
+
+
+
+### **分布式IP地址防碰撞分配算法寻优**
+
+
+
+## 当前工作
+
+---
+
+
+
+
+
+
+
+## 个人总结
+
+---
+
+
+
+
+
