@@ -6,9 +6,10 @@ order: 4
 
 
 ## **About Me**
-[CV](/assets/cv/Zian_Yuan_CV.pdf) [简历](/assets/cv/Zian_Yuan_CV_zh.pdf)
+[CV](/assets/cv/Zian_Yuan_CV.pdf) &emsp;&emsp;&emsp;&emsp;&emsp; [简历](/assets/cv/Zian_Yuan_CV_zh.pdf)
 
 I am presently a postgraduate students at Key Laboratory of Computer Network and Information Integration Ministry of Education, Southeast University, Nanjing, China, supervised by Prof. Xiaoping Li and associate supervised by Dr. Shuang Wang. My research focuses on hybrid deployment problem for microservices and machine learning tasks in clusters an issue commonly referred to as **'colocation'**. To solve the problem, I study on the following methods, including but not limited to distributed algorithms, time-series prediction, reinforcement learning, and graph neural networks. Before this, I recieved my Bachelor's degree in Engineering Management at the College of Architecture Science and Engineering at Yangzhou University, Yangzhou, China.
+
 ---
 
 
@@ -20,6 +21,7 @@ August 2021 - now
 Yangzhou University,Yangzhou,China
 B.Eng. in Engineering Management,College of Architectural Science and Engineering.
 August 2016 - July 2020
+
 ---
 
 ## **Research and Publications**
