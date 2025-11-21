@@ -1,7 +1,7 @@
 ---
 title: 'FLASHINFER: EFFICIENT AND CUSTOMIZABLE ATTENTION ENGINE FORLLM INFERENCE SERVING'
 date: 2025-11-21
-permalink: #/posts/2012/08/blog-post-4/
+permalink: /post/FLASHINFER.md
 tags:
   - MLSys2025
   - LLMs
