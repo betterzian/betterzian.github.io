@@ -309,7 +309,8 @@ permalink: /:categories/:title/
 timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 safe: false
-github:[metadata]
+github:
+  - metadata
 
 # Plugins
 plugins:
