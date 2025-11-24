@@ -1,17 +1,15 @@
 ---
-title: 'FLASHINFER: EFFICIENT AND CUSTOMIZABLE ATTENTION ENGINE FORLLM INFERENCE SERVING'
-date: 2025-11-21
-permalink: /post/FLASHINFER.md
+title: 'FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving'
+date: 2125-11-21
+permalink: /MLSys2025/Session1/FlashInfer.md
 tags:
   - MLSys2025
   - LLMs
 ---
 
+including paper: [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](https://mlsys.org/virtual/2025/poster/3259)
 
-including paper: FLASHINFER: EFFICIENT AND CUSTOMIZABLE ATTENTION ENGINE FORLLM INFERENCE SERVING
-
-title: FLASHINFER: EFFICIENT AND CUSTOMIZABLE ATTENTION ENGINE FORLLM INFERENCE SERVING
-=====
+# FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
 
 ## 问题与挑战
 
