@@ -1,6 +1,6 @@
 ---
 title: 'DiffServe: Efficiently Serving Text-to-Image Diffusion Models with Query-Aware Model Scaling'
-date: 2125-11-24
+date: 2025-11-24
 permalink: /MLSys2025/Session1/DiffServe/
 tags:
   - MLSys2025
@@ -48,7 +48,7 @@ including paper: [DiffServe: Efficiently Serving Text-to-Image Diffusion Models 
 
 ## 系统框架
 
-![System Framework](../assets/image-DiffServe-1.png)
+![System Framework](../assets/post/image-DiffServe-1.png)
 
 #### 控制器
 
@@ -197,12 +197,12 @@ FID 的核心思想是：**“如果两张图片在视觉上相似，那么它�
 
    - 使用计算出的统计量，计算两个多元高斯分布之间的 **Fréchet 距离**，也称为 Wasserstein-2 距离。
 
-   - 具体的计算公式如下：$\text{FID} = \|\mu_r - \mu_g\|^2 + \text{Tr}(\Sigma_r + \Sigma_g - 2(\Sigma_r \Sigma_g)^{1/2})$
+   - 具体的计算公式如下：$\text{FID} = \lVert\mu_r - \mu_g\rVert^2 + \text{Tr}(\Sigma_r + \Sigma_g - 2(\Sigma_r \Sigma_g)^{1/2})$
 
    
    其中：
    
-   - $\|\mu_r - \mu_g\|^2$是两个均值向量之间的欧几里得距离的平方。它衡量了两个分布中心点的偏离程度。
+   - $\lVert\mu_r - \mu_g\rVert^2$是两个均值向量之间的欧几里得距离的平方。它衡量了两个分布中心点的偏离程度。
    - $\text{Tr}$ 是矩阵的迹（主对角线元素之和）。
    - $\Sigma_r$和$\Sigma_g$分别是真实数据和生成数据的协方差矩阵。
    - 公式的后半部分$\text{Tr}(\Sigma_r + \Sigma_g - 2(\Sigma_r \Sigma_g)^{1/2})$衡量了两个分布形状（离散程度和相关性）的差异。
