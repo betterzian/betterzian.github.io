@@ -255,6 +255,7 @@ defaults:
     values:
       layout: single
       toc: true
+      sidebar: true
       author_profile: true
   # _teaching
   - scope:
