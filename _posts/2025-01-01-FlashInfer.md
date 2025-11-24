@@ -1,6 +1,6 @@
 ---
 title: 'FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving'
-date: 2125-11-21
+date: 2025-11-21
 permalink: /MLSys2025/Session1/FlashInfer.md
 tags:
   - MLSys2025
