@@ -77,7 +77,14 @@ layout: default
     {% if site.comments.provider and page.comments %}
       {% include comments.html %}
     {% endif %}
+    {%if page.toc %}
+    </div class=sidebar__right>
+      {% toc %}
+    </div>
+  {% endif %}
   </article>
+
+  
 
   {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
@@ -92,4 +99,5 @@ layout: default
       </div>
     </div>
   {% endif %}
+
 </div>
