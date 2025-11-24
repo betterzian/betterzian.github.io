@@ -1,6 +1,6 @@
 ---
 title: 'DiffServe: Efficiently Serving Text-to-Image Diffusion Models with Query-Aware Model Scaling'
-date: 2125-11-21
+date: 2125-11-24
 permalink: /MLSys2025/Session1/DiffServe.md
 tags:
   - MLSys2025
