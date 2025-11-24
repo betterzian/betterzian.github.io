@@ -210,6 +210,13 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+# 添加 TOC 相关设置
+toc:                                  # 新增 TOC 配置
+  enabled: true                       # 启用 TOC
+  sticky: true                        # 启用粘性/悬浮侧边栏
+  sidebar: true                       # 显示在侧边栏
+  min_level: 1                        # 最小标题级别
+  max_level: 6                        # 最大标题级别
 
 # These settings control the types of collections used by the template
 collections:
@@ -235,6 +242,7 @@ defaults:
       type: posts
     values:
       layout: single
+      toc: true
       author_profile: true
       read_time: true
       comments: true
@@ -246,6 +254,7 @@ defaults:
       type: pages
     values:
       layout: single
+      toc: true
       author_profile: true
   # _teaching
   - scope:
@@ -253,6 +262,7 @@ defaults:
       type: teaching
     values:
       layout: single
+      toc: true
       author_profile: true
       share: true
       comments: true
@@ -262,6 +272,7 @@ defaults:
       type: publications
     values:
       layout: single
+      toc: true
       author_profile: true
       share: true
       comments: true
@@ -271,6 +282,7 @@ defaults:
       type: portfolio
     values:
       layout: single
+      toc: true
       author_profile: true
       share: true
       comment: true
@@ -296,22 +308,26 @@ permalink: /:categories/:title/
 # paginate_path: /page:num/
 timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
+safe: false
+github:[metadata]
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-#  - jekyll-sitemap
+  - jekyll-sitemap
   - jemoji
+  - jekyll-toc
+
 
 # Mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-#  - jekyll-sitemap
-  - jemoji
+# whitelist:
+#   - jekyll-feed
+#   - jekyll-gist
+#   - jekyll-paginate
+# #  - jekyll-sitemap
+#   - jemoji
 
 
 # Archives

@@ -1,0 +1,60 @@
+name: Build & Deploy Jekyll (China Optimized)
+
+on:
+  push:
+    branches:
+      - main     # 根据你默认的分支改
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'           # 可以根据你本地 / Gemfile 版本调
+          bundler-cache: true            # 自动缓存 gem
+
+      - name: 配置 RubyGems 镜像（中国镜像）
+        run: |
+          bundle config set --local mirror.https://rubygems.org https://gems.ruby-china.com/
+          # 如果你愿意，也可以加上这些：
+          # 取消默认源并添加中国源
+          # bundle config set --local gem.source https://gems.ruby-china.com/
+          # gem sources --remove https://rubygems.org/
+          # gem sources --add https://gems.ruby-china.com/
+
+      - name: 安装依赖 Gems
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --destination _site
+        env:
+          JEKYLL_ENV: production
+
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
