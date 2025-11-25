@@ -289,6 +289,11 @@
     }
   }
 
+  ul {
+    padding: 10px;
+    list-style-type: none;
+  }
+
   li {
     white-space: nowrap;
   }
@@ -296,9 +301,8 @@
   a {
     display: block;
     margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-block: 2px;
+    padding-inline-end: 5px;
     color: inherit;
     font-size: $type-size-5;
     text-decoration: none;
@@ -306,5 +310,32 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+/*
+   Wide Pages
+   ========================================================================== */
+
+.wide .sidebar__right {
+  margin-bottom: 1em;
+
+  @include breakpoint($large) {
+    position: initial;
+    top: initial;
+    inset-inline-end: initial;
+    width: initial;
+    margin-inline-end: initial;
+    padding-inline-start: initial;
+    z-index: initial;
+
+    &.sticky {
+      float: none;
+    }
+  }
+
+  @include breakpoint($x-large) {
+    width: initial;
+    margin-inline-end: initial;
   }
 }
