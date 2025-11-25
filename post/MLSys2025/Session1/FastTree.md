@@ -34,14 +34,14 @@ including paper: [FastTree: Optimizing Attention Kernel and Runtime for Tree-Str
 
 ## 决策空间
 
-<img src="../assets/post/FastTree-Figure5.png" alt="Figure5" style="zoom:75%;" />
+<img src="./../assets/post/FastTree-Figure5.png" alt="Figure5" style="zoom:75%;" />
 
 论文提出的方法就是formulate the problem as a binary edge-assignment task.：**为树中的每一条边分配一个二进制值（0或1）。**
 
 - **`f(edge) = 1`**：表示这条边所连接的两个节点**被“连接”**。在计算时，父节点的上下文会和子节点的上下文**拼接**在一起，作为一个整体上下文来处理。
 - **`f(edge) = 0`**：表示这条边被**“切断”**。父节点和子节点将被视为两个独立的上下文组。
 
-<img src="../assets/post/FastTree-equation2.png" alt="image-20251125195329460" style="zoom: 33%;" />
+<img src="./../assets/post/FastTree-equation2.png" alt="image-20251125195329460" style="zoom: 33%;" />
 
 # 解决方法
 
@@ -166,7 +166,7 @@ FastTree 内核的根本转变在于：**为一个“上下文-查询组”启�
 
 ### 内核设计详解
 
-<img src="../assets/post/FastTree-Figure8.png" alt="figure8" style="zoom:67%;" />
+<img src="./../assets/post/FastTree-Figure8.png" alt="figure8" style="zoom:67%;" />
 
 #### 1. **“一核多用”的并行架构**
 
@@ -210,9 +210,9 @@ FastTree 内核的根本转变在于：**为一个“上下文-查询组”启�
   - **与前缀树的区别**：普通前缀树为每个字符创建节点，可能浪费空间。Radix树通过**压缩单分支节点**优化了这一点。
   - **与Patricia树的关系**：这两个术语经常混用。狭义上，**Patricia树是Radix树的一种特例，其基数为2（即按位比较和分支）**。广义上，许多资料将两者视为同一概念，即**压缩前缀树**。（如：将`key`转为二进制`01101011 01100101 01111001`然后以01来分叉。）
 
-<img src="../assets/post/FastTree-Trie.png" alt="Trie" style="zoom:50%;" />
+<img src="./../assets/post/FastTree-Trie.png" alt="Trie" style="zoom:50%;" />
 
-<img src="../assets/post/FastTree-radix-tree.png" alt="Radix Tree" style="zoom:50%;" />
+<img src="./../assets/post/FastTree-radix-tree.png" alt="Radix Tree" style="zoom:50%;" />
 
 ## 长尾效应（long tail effect）
 
@@ -240,9 +240,9 @@ $\text{SoftMax}(z_i) = \frac{e^{z_i - \max_{k=1}^{K} z_k}}{\sum_{j=1}^{K}( e^{x_
 
 它的计算原理其实很简单，利用了指数运算规则: **同底的两个指数相乘等于两个指数幂的相加，除法同理**，这里要提的一点就是，**online softmax**是在**safe softmax**的基础上做的改进。
 
-![algorithm](../assets/post/FastTree-algorithm.png)
+![algorithm](./../assets/post/FastTree-algorithm.png)
 
-![proof](../assets/post/FastTree-proof.png)
+![proof](./../assets/post/FastTree-proof.png)
 
 到这里，经历了一次遍历，同时获得了**sum**和**max**，后面的计算步骤就跟**safe softmax**保持一致了，整个开销为: 两次load和一次store。所以相比**safe softmax**在访存上确实有优化的。
 
