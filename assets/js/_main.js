@@ -62,4 +62,22 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  const scrollTocToContent = function (event) {
+    var target = event.target;
+    var scrollOptions = { behavior: "auto", block: "nearest", inline: "start" };
+
+    var tocElement = document.querySelector("aside.sidebar__right.sticky");
+    if (!tocElement) return;
+    if (window.getComputedStyle(tocElement).position !== "sticky") return;
+
+    if (target.parentElement.classList.contains("toc__menu") && target == target.parentElement.firstElementChild) {
+      // Scroll to top instead
+      document.querySelector("nav.toc header").scrollIntoView(scrollOptions);
+    } else {
+      target.scrollIntoView(scrollOptions);
+    }
+  };
+    
 });
+
+

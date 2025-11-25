@@ -210,13 +210,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# 添加 TOC 相关设置
-toc:                                  # 新增 TOC 配置
-  enabled: true                       # 启用 TOC
-  sticky: true                        # 启用粘性/悬浮侧边栏
-  sidebar: true                       # 显示在侧边栏
-  min_level: 1                        # 最小标题级别
-  max_level: 6                        # 最大标题级别
 
 # These settings control the types of collections used by the template
 collections:
@@ -243,6 +236,7 @@ defaults:
     values:
       layout: single
       toc: true
+      toc_sticky: true
       author_profile: true
       read_time: true
       comments: true
@@ -320,16 +314,16 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
-  - jekyll-toc
+  # - jekyll-toc
 
 
 # Mimic GitHub Pages with --safe
-# whitelist:
-#   - jekyll-feed
-#   - jekyll-gist
-#   - jekyll-paginate
-# #  - jekyll-sitemap
-#   - jemoji
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
 
 
 # Archives
