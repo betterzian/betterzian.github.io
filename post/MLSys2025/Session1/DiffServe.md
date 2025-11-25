@@ -50,7 +50,7 @@ including paper: [DiffServe: Efficiently Serving Text-to-Image Diffusion Models 
 
 ![System Framework](../assets/post/image-DiffServe-1.png)
 
-#### 控制器
+### 控制器
 
 - **角色**：系统的控制中心，位于控制路径。
 - **功能**：
@@ -58,14 +58,14 @@ including paper: [DiffServe: Efficiently Serving Text-to-Image Diffusion Models 
   - **动态配置**：设置每个工作节点的**批处理大小** 和轻量级节点所用的**置信度阈值**。
   - **监控与决策**：周期性地从工作节点收集运行时信息（如队列长度、需求），并利用这些信息做出资源分配决策。
 
-#### 模型仓库
+### 模型仓库
 
 - **角色**：存储和管理所有可用的模型。
 - **功能**：
   - 负责**注册**和**存储**不同的扩散模型变体（轻量级和重量级）。
   - 存储用于模型级联的**判别器**。
 
-#### 负载均衡器
+### 负载均衡器
 
 - **角色**：位于数据路径的入口，负责查询的路由。
 - **功能**：
@@ -73,7 +73,7 @@ including paper: [DiffServe: Efficiently Serving Text-to-Image Diffusion Models 
   - **初始路由**：将所有查询首先发送到运行**轻量级扩散模型**的工作节点。
   - **决策与转发**：根据该节点返回的判别结果，要么直接返回图像，要么将查询**转发**给**重量级扩散模型**节点。
 
-#### 工作节点
+### 工作节点
 
 - **角色**：执行实际模型推理的服务器。
 - **功能**：
