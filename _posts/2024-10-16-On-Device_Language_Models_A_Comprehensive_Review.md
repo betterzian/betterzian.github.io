@@ -12,7 +12,7 @@ including paper: On-Device Language Models: A Comprehensive Review
 
 title: On-Device Language Models: A Comprehensive Review
 =====
-![image-on-device-1](./../assets/post/image-on-device-1)
+![image-on-device-1]({$filename}/../../assets/post/image-on-device-1)
 
 ## Foundations and Preliminaries
 

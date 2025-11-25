@@ -1,7 +1,7 @@
 ---
 title: 'DiffServe: Efficiently Serving Text-to-Image Diffusion Models with Query-Aware Model Scaling'
 date: 2025-11-24
-permalink: /MLSys2025/Session1/DiffServe/
+permalink: /post/MLSys2025/Session1/DiffServe/
 toc: true
 toc_sticky: true
 tags:
@@ -48,7 +48,7 @@ including paper: [DiffServe: Efficiently Serving Text-to-Image Diffusion Models 
 
 ## 系统框架
 
-![System Framework](./../assets/post/image-DiffServe-1.png)
+![System Framework]({$filename}/../../assets/post/image-DiffServe-1.png)
 
 ### 控制器
 
