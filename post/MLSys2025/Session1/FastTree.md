@@ -2,6 +2,8 @@
 title: 'FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference'
 date: 2025-11-21
 permalink: /MLSys2025/Session1/FastTree/
+toc: true
+toc_sticky: true
 tags:
   - MLSys2025
   - LLMs

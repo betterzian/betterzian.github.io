@@ -2,7 +2,6 @@
 title: 'On-Device Language Models: A Comprehensive Review'
 date: 2024-10-16
 permalink: #/posts/2012/08/blog-post-4/
-toc: true
 tags:
   - edge computing
   - LLMs

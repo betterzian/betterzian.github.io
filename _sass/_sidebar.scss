@@ -90,7 +90,7 @@
       ul {
         @for $j from 1 through $i {
           & ul {
-            padding-left: $j * 1em; // 每级缩进1em，可修改
+            padding-left: $j * 5px; // 每级缩进1em，可修改
           }
         }
       }
@@ -306,7 +306,7 @@
   }
 
   ul {
-    padding: 10px;
+    padding: 5px;
     list-style-type: none;
   }
 
