@@ -72,13 +72,29 @@
       @include clearfix();
       position: -webkit-sticky;
       position: sticky;
-      top: 3em;
+      top: 4em;
       float: inline-end;
 
       .toc {
         .toc__menu {
           overflow-y: auto;
           max-height: calc(100vh - 7em);
+          ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    // 自动为嵌套ul添加缩进
+    @for $i from 1 through 6 { // 假设最大6级
+      ul {
+        @for $j from 1 through $i {
+          & ul {
+            padding-left: $j * 1em; // 每级缩进1em，可修改
+          }
+        }
+      }
+    }
         }
       }
     }
