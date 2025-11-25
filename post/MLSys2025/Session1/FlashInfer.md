@@ -11,8 +11,6 @@ tags:
 
 including paper: [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](https://mlsys.org/virtual/2025/poster/3259)
 
-# FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving
-
 ## 问题与挑战
 
 1. **工作负载多样性与输入动态性**：LLM服务包含多种计算模式（如预填充、解码），请求的序列长度变化大，存在前缀共享、树状解码等复杂模式，导致负载不均衡。

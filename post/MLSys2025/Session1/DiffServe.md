@@ -11,8 +11,6 @@ tags:
 
 including paper: [DiffServe: Efficiently Serving Text-to-Image Diffusion Models with Query-Aware Model Scaling](https://mlsys.org/virtual/2025/poster/3287)
 
-# DiffServe: Efficiently Serving Text-to-Image Diffusion Models with Query-Aware Model Scaling
-
 ## 问题与挑战
 
 ### 挑战一：为扩散模型构建有效的级联（模型级联失效）
