@@ -1,6 +1,6 @@
 ---
 title: 'FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference'
-date: 2025-11-21
+date: 2025-11-24
 permalink: /post/MLSys2025/FastTree/
 toc: true
 toc_sticky: true
@@ -236,7 +236,7 @@ $\text{SoftMax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$
 
 $\text{SoftMax}(z_i) = \frac{e^{z_i - \max_{k=1}^{K} z_k}}{\sum_{j=1}^{K}( e^{x_j} - \max_{k=1}^{K}z_k)}$
 
-### online softmax
+### Online Softmax
 
 它的计算原理其实很简单，利用了指数运算规则: **同底的两个指数相乘等于两个指数幂的相加，除法同理**，这里要提的一点就是，**online softmax**是在**safe softmax**的基础上做的改进。
 
