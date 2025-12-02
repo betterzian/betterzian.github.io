@@ -1,6 +1,6 @@
 ---
 title: 'Agentic AI Survey'
-date: 2025-12-03
+date: 2025-12-02
 permalink: #/posts/
 tags:
   - Agentic AI
